@@ -42,4 +42,3 @@ output "vpc_information" {
 ## O Comando Terraform Output, printa esse arquivo de output na tela.
 ## É possível utilizar o comando Terraform output -json, para obter o output em um diferente formato
   
-}
