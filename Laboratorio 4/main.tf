@@ -30,7 +30,14 @@ resource "aws_instance" "servidor_ubuntu"{
     private_key = tls_private_key.generated.private_key_pem
     host        = self.public_ip
     }
-
+    provisioner "local-exec"{
+        inline = [
+            "sudo rm -rf /tmp",
+            "sudo git clone https://github.com/hashicorp/demo-terraform-101 /tmp",
+            "sudo sh /tmp/assets/setup-web.sh",
+        ]
+    }
+    
     tags = {
         name = "Ubuntu EC2 Server"
     }
