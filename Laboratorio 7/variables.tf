@@ -6,7 +6,7 @@ variable "count" {
     default = null
     type    = number
 }
- 
+
 variable "enable" {
     type = bool
 }
@@ -34,8 +34,8 @@ variable "subnets" {
     }
 }
 
-description = "Subnets for the VPC"
-type =  map(object({
-    cidr_block      =   string
-    availability_zone=  string
-    }))
+#description = "Subnets for the VPC"
+#type =  map(object({
+#    cidr_block      =   string
+#    availability_zone=  string
+ #   }))
